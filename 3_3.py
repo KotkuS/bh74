@@ -1,0 +1,8 @@
+name = input("Как вас зовут:")
+age = input("Сколько вам лет:")
+city = input("Из какого вы города:")
+print(f"Меня зовут {name}, мне {age}, я из города {city}")
+text = "Меня зовут %s, мне %s, я из города %s" % (name, age, city)
+print(text)
+text2 = "Меня зовут {}, мне {}, я из города {}".format(name, age, city)
+print(text2)
