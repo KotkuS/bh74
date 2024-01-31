@@ -1,4 +1,4 @@
 text = input("Введите предложение:")
-print(text.replace(" ","-"))
+print(text.replace(" " , "-"))
 newtext = text.split()
 print("-".join(newtext))
