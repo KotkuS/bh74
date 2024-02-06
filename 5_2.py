@@ -1,3 +1,6 @@
+# Сделать калькулятор: у пользователя
+# спрашивается число, потом действие и второе
+# число
 first_number = float(input("Enter the first number: "))
 action = input("Enter an action (+, -, *, /): ")
 second_number = float(input("Enter the second number: "))
