@@ -85,3 +85,24 @@
 #
 # d = decorator(4)
 # print(d(2))
+# if i == "1":
+#     i = 1
+#     l.insert(-1, i)
+# elif i == "2":
+#     i = 2
+# elif i == "3":
+#     i = 3
+# elif i == "4":
+#     i = 4
+# elif i == "5":
+#     i = 5
+# elif i == "6":
+#     i = 6
+# elif i == "7":
+#     i = 7
+# elif i == "8":
+#     i = 8
+# elif i == "9":
+#     i = 9
+# elif i == "0":
+#     i = 0
