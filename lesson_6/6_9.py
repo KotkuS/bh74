@@ -7,14 +7,13 @@ id_dict = {
         {"Name": "Alex",
          "SurName": "Smith",
          "Tel": 6765432,
-         "email": "wertyu@sd.com",
+         "email": "",
          }
     ],
     "ID2": [
         {"Name": "Mike",
          "SurName": "Dilan",
          "Tel": 654326,
-         "email": "asdgyu@sd.com",
          }
     ],
     "ID3": [
@@ -39,3 +38,5 @@ id_dict = {
          }
     ],
 }
+
+
