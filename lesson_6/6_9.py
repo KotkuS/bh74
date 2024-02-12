@@ -17,7 +17,7 @@ def foo():
                 a = data.get("Name", 0)
                 b = data.get("SurName", 0)
                 print(f"{a} {b} has't email")
-        if data.get("email", 0) == "":
+        if data.get("email") == "":
                 a = data.get("Name", 0)
                 b = data.get("SurName", 0)
                 print(f"{a} {b} has't email")
