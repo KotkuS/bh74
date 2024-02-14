@@ -16,12 +16,7 @@ car_3 = Car("white", 5, True)
 car_4 = Car("green", 3, True)
 car_5 = Car("gray", 4, False)
 
-cars_list = []
-cars_list.append(car_1)
-cars_list.append(car_2)
-cars_list.append(car_3)
-cars_list.append(car_4)
-cars_list.append(car_5)
+cars_list = [car_1, car_2, car_3, car_4, car_5]
 
 
 class Taxi:
