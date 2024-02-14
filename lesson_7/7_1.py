@@ -5,9 +5,6 @@ class Car:
         self.is_baby_seat = is_baby_seat
         self.is_busy = False
 
-    def __bool__(self):
-        return not self.is_busy
-
     def __str__(self):
         return (f"Color = {self.color}, passenger seats = {self.seats}. "
                 f"Baby seat availability: {self.is_baby_seat}")
@@ -33,11 +30,15 @@ class Taxi:
 
     def find_car(self, count_passengers: int, is_baby: bool):
         if is_baby == 1:
-            count_passengers += 1
+            count_passengers -= 1
         for i in cars_list:
-            if (i.seats == count_passengers) and i.is_baby_seat is True:
+            suitable_car = (i.seats >= count_passengers) and (is_baby <= i.is_baby_seat)
+            if suitable_car and i.is_busy is False:
+                i.is_busy = True
                 return print(i)
 
 
 taxi1 = Taxi(cars_list)
-taxi1.find_car(2, True)
+taxi2 = Taxi(cars_list)
+taxi1.find_car(4, True)
+taxi2.find_car(4, True)
