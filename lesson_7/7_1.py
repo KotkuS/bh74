@@ -1,5 +1,5 @@
 class Car:
-    def __init__(self, color, count_passenger_seats, is_baby_seat):
+    def __init__(self, color: str, count_passenger_seats: int, is_baby_seat: bool):
         self.color = color
         self.seats = count_passenger_seats
         self.is_baby_seat = is_baby_seat
