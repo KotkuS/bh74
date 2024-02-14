@@ -106,3 +106,43 @@
 #     i = 9
 # elif i == "0":
 #     i = 0
+# class User:
+#     def __init__(self, name, email, password, age):
+#         self.name = name
+#         self.password = password
+#         self.email = email
+#         self.is_active = False
+#         self.age = age
+#
+#     def __str__(self):
+#         return f"name={self.name}"
+#
+#     def __bool__(self):
+#         return self.is_active
+#
+#     def __int__(self):
+#         return self.age ** 2
+#
+#
+# user1 = User(name="vasya", email="email", password="1", age=3)
+#
+# print(int(user1))
+
+# def alphabet_position(text):
+#     alphabet = {
+#         "a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7,
+#         "h": 8, "i": 9, "j": 10, "k": 11, "l": 11, "m": 12, "n": 13,
+#         "o": 14, "p": 15, "q": 16, "r": 17, "s": 18, "t": 19,
+#         "u": 20, "v": 21, "w": 22, "x": 23, "y": 24, "z": 25,
+#     }
+#     for symbol in text:
+#         if symbol.lower() == alphabet.keys():
+#             new_symbol = alphabet.get(symbol)
+#             print(new_symbol)
+#         if not symbol.isalpha:
+#             continue
+#
+#     pass
+
+
+print(alphabet_position("The sun is fun"))
