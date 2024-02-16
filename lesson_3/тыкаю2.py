@@ -145,4 +145,113 @@
 #     pass
 
 
-print(alphabet_position("The sun is fun"))
+# print(alphabet_position("The sun is fun"))
+# class User:
+#     def __init__(self, first_name: str, email: str) -> None:
+#         self.first_name = first_name.title()
+#         self.email = email.lower()
+#
+#     def __str__(self) -> str:
+#         return f"User first_name={self.first_name} email={self.email}"
+#
+#
+# class Manager(User):
+#     ...
+#
+#
+# vasya = Manager("vasya", "saf@fdgf")
+# print(vasya)
+#
+# class B:
+#     ...
+#
+# class C:
+#     def __init__(self, b: B):
+#         self.obj = b
+#
+# class A:
+#     i: int = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def foo(self):
+#          return self.name.upper()
+#
+#
+# class N(A):
+#     _i: int = 5
+
+#     def foo(self):
+#         result = super().foo()
+#         return result
+#
+#
+# b = N(name="name")
+# print(b._i)
+# class Debcard():
+#     number = 123456789101112
+#     def __init__(self, number):
+#         self.__number = number
+#     @property
+#     def get_number(self):
+#         return self.__number[-4:]
+#
+#     @get_number.setter
+#     def get_number(self, value: str):
+#         if len(value) == 16:
+#             self.__number = value
+#             return self.__number
+#
+#
+# card1 = Debcard(123456789101112)
+# print(card1.get_number)
+# from dataclasses import dataclass
+#
+# @dataclass(frozen=True)
+# class User:
+#     name: str
+#     email: str
+#
+from abc import ABC, abstractmethod
+#
+# class AbstractView(ABC):
+#     @abstractmethod
+#     def get(self, request):
+#         ...
+#     def post(self, request):
+#         ...
+#
+# class ListView(AbstractView):
+#     def get(self, request):
+#         pass
+#     def post(self, request):
+#         pass
+#     @classmethod
+#     def dispatch(cls, request):
+#         pass
+
+
+class AbstarctPhone(ABC):
+    @abstractmethod
+    def call(self):
+        pass
+
+
+class SMSMixin:
+    def sms(self):
+        ...
+
+
+class MobilePhone(AbstarctPhone, SMSMixin):
+    def call(self):
+        pass
+
+    def sms(self):
+        pass
+
+
+class StaticPhone(AbstarctPhone):
+    def call(self):
+        pass
+    
