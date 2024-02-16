@@ -30,11 +30,11 @@ class Taxi:
                 suitable_car = (i.seats >= count_passengers) and (is_baby <= i.is_baby_seat)
                 if suitable_car and i.is_busy is False:
                     i.is_busy = True
-                    return print(i)
+                    print(i)
             return None
 
 
 taxi1 = Taxi(cars_list)
 taxi2 = Taxi(cars_list)
-taxi1.find_car(6, True)
-taxi2.find_car(6, True)
+taxi1.find_car(5, True)
+taxi2.find_car(5, True)
