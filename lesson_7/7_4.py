@@ -50,11 +50,31 @@ class Category:
                 cls.categories.insert(index, new_dict)
                 break
 
+    @classmethod
+    def make_published(cls, index: int):
+        try:
+            a = cls.categories[index]
+            a["is_published"] = True
+            print(a)
+        except IndexError:
+            print(f"IndexError")
 
-Category.add("Movie", True)
-Category.add("Music", False)
-Category.add("Cartoon", True)
-Category.add("Game", False)
-# Category.add("Movie", False)
-Category.delete(2)
-print(Category.categories)
+    @classmethod
+    def make_unpublished(cls, index: int):
+        try:
+            a = cls.categories[index]
+            a["is_published"] = False
+            print(a)
+        except IndexError:
+            print(f"IndexError")
+
+
+# Category.add("Movie", True)
+# Category.add("Music", False)
+# Category.add("Cartoon", True)
+# Category.add("Game", False)
+# # Category.add("Movie", False)
+# # Category.delete(2)
+# print(Category.categories)
+# Category.make_unpublished(0)
+# print(Category.categories)
