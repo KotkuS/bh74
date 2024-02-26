@@ -252,71 +252,86 @@
 #
 #
 # class StaticPhone(AbstarctPhone):
-#     def call(self):
-#         pass
+# #     def call(self):
+# #         pass
+# #
+# class Category:
+#     categories = []
 #
-class Category:
-    categories = []
+#     @classmethod
+#     def add(cls, name: str, is_published: bool):
+#         some_dict = {"Name": name, "is_published": is_published}
+#         if len(cls.categories) == 0:
+#             cls.categories.append(some_dict)
+#             return print(f"{some_dict}, {cls.categories.index(some_dict)}")
+#         try:
+#             for i in cls.categories:
+#                 for _ in i.values():
+#                     if name != i.get("Name"):
+#                         cls.categories.append(some_dict)
+#                         return print(f"{some_dict}, {cls.categories.index(some_dict)}")
+#                     else:
+#                         raise ValueError
+#         except ValueError:
+#             print(f"Ошибка: данная категория уже есть в списке!")
+#     #
+#     # @classmethod
+#     # def get(cls, index: int):
+#     #     try:
+#     #         print(cls.categories[index])
+#     #     except IndexError:
+#     #         print(f"IndexError")
+#     #
+#     # @classmethod
+#     # def delete(cls, index):
+#     #     try:
+#     #         cls.categories.pop(index)
+#     #     except IndexError:
+#     #         return None
+#     #
+#
+#     @classmethod
+#     def update(cls, index: int, new_name: str, is_published: bool):
+#         new_dict = {"Name": new_name, "is_published": is_published}
+#         try:
+#             for i in cls.categories:
+#                 if new_name == i.get("Name"):
+#                     raise ValueError
+#         except ValueError:
+#             print("You are lox")
+#         for i in cls.categories:
+#             if new_name != i.get("Name") and index > len(cls.categories) - 1:
+#                 cls.categories.append(new_dict)
+#                 break
+#         for i in cls.categories:
+#             if new_name != i.get("Name") and index <= len(cls.categories) - 1:
+#                 cls.categories.insert(index, new_dict)
+#                 break
+#
+#
+# Category.add("Movie", True)
+# Category.add("Music", False)
+# Category.add("Cartoon", True)
+# Category.add("Game", False)
+# Category.update(0, "M", True)
+# # Category.add("Mathematik", True)
+# # Category.get(1)
+# # Category.delete(2)
+# # Category.update(2, "Cartoon")
+# # Category.update(1, "Car")
+# # print(Category.categories)
+# from json import load, loads, dumps, dump
+# # file = open(file="./input.json", mode="rt", encoding="utf-8")
+# with open(file="./input.json", mode="rt", encoding="utf-8") as file:
+#     data = load(file)
+#     print(data.get("age"))
+# # print(file.read())
+# # file.seek(0)
+# print(file.read())
+# file.write("123")
+# file.writelines(["sda\n", "asddf"])
+# file.close()
+# from  pydantic import BaseModel,EmailStr, Field
 
-    @classmethod
-    def add(cls, name: str, is_published: bool):
-        some_dict = {"Name": name, "is_published": is_published}
-        if len(cls.categories) == 0:
-            cls.categories.append(some_dict)
-            return print(f"{some_dict}, {cls.categories.index(some_dict)}")
-        try:
-            for i in cls.categories:
-                for _ in i.values():
-                    if name != i.get("Name"):
-                        cls.categories.append(some_dict)
-                        return print(f"{some_dict}, {cls.categories.index(some_dict)}")
-                    else:
-                        raise ValueError
-        except ValueError:
-            print(f"Ошибка: данная категория уже есть в списке!")
-    #
-    # @classmethod
-    # def get(cls, index: int):
-    #     try:
-    #         print(cls.categories[index])
-    #     except IndexError:
-    #         print(f"IndexError")
-    #
-    # @classmethod
-    # def delete(cls, index):
-    #     try:
-    #         cls.categories.pop(index)
-    #     except IndexError:
-    #         return None
-    #
+# class UserRegister(BaseModel):
 
-    @classmethod
-    def update(cls, index: int, new_name: str, is_published: bool):
-        new_dict = {"Name": new_name, "is_published": is_published}
-        try:
-            for i in cls.categories:
-                if new_name == i.get("Name"):
-                    raise ValueError
-        except ValueError:
-            print("You are lox")
-        for i in cls.categories:
-            if new_name != i.get("Name") and index > len(cls.categories) - 1:
-                cls.categories.append(new_dict)
-                break
-        for i in cls.categories:
-            if new_name != i.get("Name") and index <= len(cls.categories) - 1:
-                cls.categories.insert(index, new_dict)
-                break
-
-
-Category.add("Movie", True)
-Category.add("Music", False)
-Category.add("Cartoon", True)
-Category.add("Game", False)
-Category.update(0, "M", True)
-# Category.add("Mathematik", True)
-# Category.get(1)
-# Category.delete(2)
-# Category.update(2, "Cartoon")
-# Category.update(1, "Car")
-print(Category.categories)
